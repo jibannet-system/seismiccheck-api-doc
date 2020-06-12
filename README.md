@@ -3,14 +3,14 @@
 **API_ROOT:** https://api.jibannet.dev/digital-seismic-check/
 
 ## Danh sách các API liên quan tới common
-###### 1. [1. Upload file csv data](#1. 1. Upload file csv data)
-###### 2. [Thêm mới Seismic](#1. Thêm mới Seismic)
-###### 3. [Lấy thông tin Seismic theo id](#2. Lấy thông tin Seismic theo id)
-###### 4. [Lấy danh sách Seismic](#3. Lấy danh sách Seismic)
-###### 5. [Lấy access token](#3. Lấy danh sách Seismic)
+###### 1. [1. Upload file csv data](#1-upload-file-csv-data)
+###### 2. [Thêm mới Seismic](#2-th%C3%AAm-m%E1%BB%9Bi-seismic)
+###### 3. [Lấy thông tin Seismic theo id](#3-l%E1%BA%A5y-th%C3%B4ng-tin-seismic-theo-id)
+###### 4. [Lấy danh sách Seismic](#4-l%E1%BA%A5y-danh-s%C3%A1ch-seismic)
+###### 5. [Lấy access token](#5-l%E1%BA%A5y-access-token)
 ***********************
 
-## <a name="1"></a>1. Upload file csv data
+## 1. Upload file csv data
 * **URL:** [{API_ROOT}/uploadcsv](#)
 * **Method:** POST
 * **Content Type:** text/plain
@@ -34,7 +34,7 @@
  ```
  - Trường hợp bị lỗi, sẽ trả về thông báo và status lỗi bằng 500
  
- ## <a name="7"></a>2. Thêm mới Seismic
+ ## 2. Thêm mới Seismic
 * **URL:** [{API_ROOT}/seismic](#)
 * **Method:** POST
 * **Content Type:** application/json
