@@ -3,11 +3,11 @@
 **API_ROOT:** https://api.jibannet.dev/digital-seismic-check/
 
 ## 関連する共通APIのリスト
-###### 1. [1. csvデータファイルをアップロード](#1-upload-file-csv-data)
-###### 2. [新規デジタル耐震チェック書を追加](#2-th%C3%AAm-m%E1%BB%9Bi-seismic)
-###### 3. [idによりデジタル耐震チェック書情報を取得](#3-l%E1%BA%A5y-th%C3%B4ng-tin-seismic-theo-id)
-###### 4. [デジタル耐震チェック書リストを取得](#4-l%E1%BA%A5y-danh-s%C3%A1ch-seismic)
-###### 5. [access tokenを取得](#5-l%E1%BA%A5y-access-token)
+###### 1. [1. csvデータファイルをアップロード](#1-csv%E3%83%87%E3%83%BC%E3%82%BF%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89)
+###### 2. [新規デジタル耐震チェック書を追加](#2-%E6%96%B0%E8%A6%8F%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E8%80%90%E9%9C%87%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E6%9B%B8%E3%82%92%E8%BF%BD%E5%8A%A0-1)
+###### 3. [idによりデジタル耐震チェック書情報を取得](#3id%E3%81%AB%E3%82%88%E3%82%8A%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E8%80%90%E9%9C%87%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E6%9B%B8%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97)
+###### 4. [デジタル耐震チェック書リストを取得](#4-%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E8%80%90%E9%9C%87%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E6%9B%B8%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E5%8F%96%E5%BE%97-1)
+###### 5. [access tokenを取得](#5-access-token%E3%82%92%E5%8F%96%E5%BE%97-1) -> **TODO**
 ***********************
 
 ## 1. csvデータファイルをアップロード
@@ -18,6 +18,7 @@
 
 ### パラメーター:
  -  **my_file[]**.の"csv"ファイルで2ファイルアップロードに転送 
+ -  **access_token**
 
 ### 戻り値:
  - file_nameのアップロードが成功した後 
@@ -71,7 +72,9 @@
         "snow_perpendicular": "1.0",
         "avs30": "123",
         "path_file":"20200526164338",
-        "user_id": "1"
+        "user_id": "1",
+	
+	"access_token": "4AS2LdsNCIMhKVXjaABz"
     }
 ```
 
@@ -115,13 +118,13 @@
 ```
 
 ## 3.idによりデジタル耐震チェック書情報を取得
-* **URL:** [{API_ROOT}/seismic/{id}](#)
+* **URL:** [{API_ROOT}/seismic/{access_token}/{id}](#)
 * **Method:** GET
 * **Content Type:** application/json
 * **Reponse Type:** text/json
 
 ##### 例: 
-		URL: [{API_ROOT}/seismic/{id}
+		URL: [{API_ROOT}/seismic/{access_token}/{id}
 ### 戻り値:
     
   ```
@@ -151,7 +154,7 @@
   ```
 
 ## 4. デジタル耐震チェック書リストを取得 
-* **URL:** [{API_ROOT}/seismics}](#)
+* **URL:** [{API_ROOT}/seismics/{access_token}](#)
 * **Method:** GET
 * **Content Type:** application/json
 * **Reponse Type:** text/json
@@ -189,7 +192,7 @@
     }
   ```
   
-## 5. access tokenを取得
+## 5. access tokenを取得 -> **TODO**
 * **URL:** [{API_ROOT}/auth/:key](#)
 * **Method:** GET
 * **Content Type:** application/json
