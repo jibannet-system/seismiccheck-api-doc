@@ -193,7 +193,7 @@
   ```
   
 ## 5. access tokenを取得 -> **TODO**
-* **URL:** [{API_ROOT}/auth/:key](#)
+* **URL:** [{API_ROOT}/auth/{key}](#)
 * **Method:** GET
 * **Content Type:** application/json
 * **Reponse Type:** text/json
