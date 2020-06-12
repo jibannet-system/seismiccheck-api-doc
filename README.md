@@ -2,25 +2,25 @@
 
 **API_ROOT:** https://api.jibannet.dev/digital-seismic-check/
 
-## Danh sách các API liên quan tới common
-###### 1. [1. Upload file csv data](#1-upload-file-csv-data)
-###### 2. [Thêm mới Seismic](#2-th%C3%AAm-m%E1%BB%9Bi-seismic)
-###### 3. [Lấy thông tin Seismic theo id](#3-l%E1%BA%A5y-th%C3%B4ng-tin-seismic-theo-id)
-###### 4. [Lấy danh sách Seismic](#4-l%E1%BA%A5y-danh-s%C3%A1ch-seismic)
-###### 5. [Lấy access token](#5-l%E1%BA%A5y-access-token)
+## 関連する共通APIのリスト
+###### 1. [1. csvデータファイルをアップロード](#1-upload-file-csv-data)
+###### 2. [新規デジタル耐震チェック書を追加](#2-th%C3%AAm-m%E1%BB%9Bi-seismic)
+###### 3. [idによりデジタル耐震チェック書情報を取得](#3-l%E1%BA%A5y-th%C3%B4ng-tin-seismic-theo-id)
+###### 4. [デジタル耐震チェック書リストを取得](#4-l%E1%BA%A5y-danh-s%C3%A1ch-seismic)
+###### 5. [access tokenを取得](#5-l%E1%BA%A5y-access-token)
 ***********************
 
-## 1. Upload file csv data
+## 1. csvデータファイルをアップロード
 * **URL:** [{API_ROOT}/uploadcsv](#)
 * **Method:** POST
 * **Content Type:** text/plain
 * **Reponse Type:** text/plain
 
-### Tham số:
- - Truyền vào 2 file upload với key: **my_file[]**. Định dạng file hợp lệ: "csv"
+### パラメーター:
+ -  **my_file[]**.の"csv"ファイルで2ファイルアップロードに転送 
 
-### Dữ liệu trả về:
- - file_name sau khi upload thành công. 
+### 戻り値:
+ - file_nameのアップロードが成功した後 
  ```
 	 {
 		"message": "Upload file success!",
@@ -32,15 +32,15 @@
 		"code": 1
 	}
  ```
- - Trường hợp bị lỗi, sẽ trả về thông báo và status lỗi bằng 500
+ - エラーの場合、通知と500のエラーステータスを返します。
  
- ## 2. Thêm mới Seismic
+ ## 2. 新規デジタル耐震チェック書を追加
 * **URL:** [{API_ROOT}/seismic](#)
 * **Method:** POST
 * **Content Type:** application/json
 * **Reponse Type:** text/json
 
-### Tham số:
+### パラメーター:
 ```
 	{
         "no": "A123",
@@ -75,7 +75,7 @@
     }
 ```
 
-### Dữ liệu trả về:
+### 戻り値:
 ```
 	{
         "message": "New seismic created!",
@@ -114,15 +114,15 @@
     }
 ```
 
-## 3. Lấy thông tin Seismic theo id
+## 3.idによりデジタル耐震チェック書情報を取得
 * **URL:** [{API_ROOT}/seismic/{id}](#)
 * **Method:** GET
 * **Content Type:** application/json
 * **Reponse Type:** text/json
 
-##### Ví dụ: 
+##### 例: 
 		URL: [{API_ROOT}/seismic/{id}
-### Dữ liệu trả về:
+### 戻り値:
     
   ```
 	{
@@ -150,15 +150,15 @@
     }
   ```
 
-## 4. Lấy danh sách Seismic 
+## 4. デジタル耐震チェック書リストを取得 
 * **URL:** [{API_ROOT}/seismics}](#)
 * **Method:** GET
 * **Content Type:** application/json
 * **Reponse Type:** text/json
 
-##### Ví dụ: 
+##### 例: 
 		URL: [{API_ROOT}/seismics
-### Dữ liệu trả về:
+### 戻り値:
     
   ```
 	{
@@ -189,7 +189,7 @@
     }
   ```
   
-## 5. Lấy access token
+## 5. access tokenを取得
 * **URL:** [{API_ROOT}/auth/:key](#)
 * **Method:** GET
 * **Content Type:** application/json
