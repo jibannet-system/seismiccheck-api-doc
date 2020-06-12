@@ -192,7 +192,7 @@
     }
   ```
   
-## 5. access tokenを取得 -> **TODO**
+## 5. access tokenを取得 -> **TODO:変更依頼が急遽発生**
 * **URL:** [{API_ROOT}/auth/{key}](#)
 * **Method:** GET
 * **Content Type:** application/json
